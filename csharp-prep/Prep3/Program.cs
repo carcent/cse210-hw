@@ -28,7 +28,7 @@ class Program
                 Console.Write("Lower");
             }
 
-            if (MagicNumber == guess)
+            else
             {
                 Console.Write("You guessed it!");
             }
