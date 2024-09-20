@@ -1,7 +1,4 @@
 using System;
-using System.Diagnostics;
-
-[DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(),nq}}")]
 class Program
 {
     static void Main(string[] args)
@@ -11,38 +8,40 @@ class Program
         string response = Console.ReadLine();
         
         int grade = int.Parse(response);
+
+        string letter = " ";
         
         if (grade >= 90)
         
         {
-            Console.WriteLine("A");
+            letter = "A";
         }
         
         else if (grade >= 80)
         
         {
-            Console.WriteLine("B");
+            letter = "B";
         }
         
         else if (grade >= 70)
         
         {
-            Console.WriteLine("C");
+            letter = "C";
         }
         
         else if (grade >= 60)
         
         {
-            Console.WriteLine("D");
+            letter = "D";
         }
         
-        else 
-        
+        else      
         {        
-            Console.WriteLine("F");
+            letter = "F";
         }
+        Console.WriteLine($"Your grade is: {letter}");
 
-        if (grade <= 70)
+        if (grade >= 70)
         {
             Console.WriteLine("You didn't meet the requirements to pass the class. Don't let one fall determine your life! You'll do great next time");
         }
