@@ -19,7 +19,7 @@ class Program
 
             if (MagicNumber > guess)
             {
-                Console.Write("Higher");
+                Console.Write("Higher"); 
             }
 
             else if (MagicNumber < guess)
