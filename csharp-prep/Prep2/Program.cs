@@ -41,13 +41,13 @@ class Program
         }
         Console.WriteLine($"Your grade is: {letter}");
 
-        if (grade >= 70)
+        if (grade < 70)
         {
-            Console.WriteLine("You didn't meet the requirements to pass the class. Don't let one fall determine your life! You'll do great next time");
+            Console.WriteLine("You didn't meet the requirements to pass the class. Don't let one fall determine your life! You'll do great next time.");
         }
         else
         {
-            Console.WriteLine("Congratulations! You have pass your course. with effort everything is possible");
+            Console.WriteLine("Congratulations! You have pass your course. with effort everything is possible.");
         }
     }
 }
