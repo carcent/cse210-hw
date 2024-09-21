@@ -8,9 +8,8 @@ class Program
         Random randomGenerator = new Random();
         int MagicNumber = randomGenerator.Next(1,101);
         
-        Console.Write("What is your guess?");
-        string answer = Console.ReadLine();
-        int guess = int.Parse(answer);
+        
+        int guess = 0;
         
         while (guess != MagicNumber)
         
