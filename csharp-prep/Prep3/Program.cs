@@ -12,24 +12,25 @@ class Program
         string answer = Console.ReadLine();
         int guess = int.Parse(answer);
         
-        while (guess != MagicNumber);
+        while (guess != MagicNumber)
+        
         {
             Console.Write("What is your guess?");
-            guess = int.Parse(answer);
+            guess = int.Parse(Console.ReadLine());
 
             if (MagicNumber > guess)
             {
-                Console.Write("Higher"); 
+                Console.WriteLine("Higher"); 
             }
 
             else if (MagicNumber < guess)
             {
-                Console.Write("Lower");
+                Console.WriteLine("Lower");
             }
 
             else
             {
-                Console.Write("You guessed it!");
+                Console.WriteLine("You guessed it!");
             }
         }
     }
