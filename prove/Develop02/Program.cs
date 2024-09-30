@@ -13,7 +13,8 @@ class Program
 
         
 
-        List<Prompts> prompts = new List<Prompts>();
+        Prompts prompts = new Prompts();
+        
 
         List<string> _prompts = new List<string>();
         
@@ -45,6 +46,8 @@ class Program
             {
                 Random rnd = new Random();
                 int prompt = rnd.Next(_prompts.Count);
+
+               
 
 
                 Console.WriteLine(_prompts[prompt]);
@@ -88,7 +91,7 @@ class Program
 
                 Journal load = new Journal();
                 load.LoadFromfile(filename);
-
+                
             }
             //Save last entry
             else if (number ==4)
