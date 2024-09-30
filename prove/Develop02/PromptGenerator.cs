@@ -4,6 +4,12 @@ public class Prompts
 
     public string GetRandomPrompt()
     {
-            return"";
+               
+        
+        Random rnd = new Random();
+        int prompt = rnd.Next(_prompts.Count);
+        Console.WriteLine(_prompts[prompt]);
+        return "";
+
     }    
 }
