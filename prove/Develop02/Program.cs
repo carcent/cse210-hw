@@ -10,23 +10,10 @@ class Program
     static void Main(string[] args)
     {
         int number = -1;
-
-        
-
-        Prompts prompts = new Prompts();
-        
-
-        List<string> _prompts = new List<string>();
-        
-        _prompts.Add("Is there something you would like to change that you did today?");
-        _prompts.Add("Did you meet anyone today?");
-        _prompts.Add("Did you find an opportunity to share the gospel?");
-        _prompts.Add("How was your interaction with others today?");
-        _prompts.Add("Were you able to share your testimony??");
-        
-                
-        
+      
         Console.WriteLine("Hello! this is your Personal Journal! You will have a list of options Choose the corresponding number");
+
+        Journal journal = new Journal();
 
         while (number != 0)
         {
@@ -41,17 +28,22 @@ class Program
             string choice = Console.ReadLine();
             number = int.Parse(choice);
 
+            if (!int.TryParse(choice, out number))
+            {
+                Console.WriteLine("Invalid Entry. Please enter a number from 0-4");
+            }
+
+            Prompts prompts = new Prompts();
+            prompts.GetRandomPrompt();
+
             //add entry
             if (number == 1)
             {
-                Random rnd = new Random();
-                int prompt = rnd.Next(_prompts.Count);
+                             
 
-               
-
-
-                Console.WriteLine(_prompts[prompt]);
-                string question = _prompts[prompt];
+                //Console.WriteLine(_prompts[prompt]);
+                string question = prompts.GetRandomPrompt();
+                Console.WriteLine(question);
                 string response = Console.ReadLine();    
                 
                 Entry e1 = new Entry();
@@ -64,8 +56,9 @@ class Program
                 e1._promptText = question;
                 e1.DisplayEntry(); 
 
-               Journal journal = new Journal();
-               journal.AddEntry(e1);
+                journal.AddEntry(e1);
+
+                Console.WriteLine("Entry Added");
                
 
                
@@ -76,21 +69,17 @@ class Program
             //display entries
             else if (number ==2)
             {
-
-            Journal display = new Journal();
-            display.DisplayAll();
-
-
+                journal.DisplayAll();
 
             }
+            
             //load journal
             else if (number ==3)
             {
                 Console.WriteLine("What is the file name that you want to load your Journal from?");
                 string filename = Console.ReadLine();  
 
-                Journal load = new Journal();
-                load.LoadFromfile(filename);
+                journal.LoadFromfile(filename);
                 
             }
             //Save last entry
@@ -99,10 +88,8 @@ class Program
                 Console.Write("What is the file name that you want to save your Journal?");
                 string filename = Console.ReadLine();
 
-                Journal save = new Journal();
-                save.SaveToFile(filename);
+                journal.SaveToFile(filename);
                 
-
             }
 
 
