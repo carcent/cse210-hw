@@ -3,7 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 
 public class Scripture
 {
-        Reference _reference;
+    Reference _reference;
     private List<Word> _words; 
     
 
