@@ -39,9 +39,6 @@ class Program
             //add entry
             if (number == 1)
             {
-                             
-
-                //Console.WriteLine(_prompts[prompt]);
                 string question = prompts.GetRandomPrompt();
                 Console.WriteLine(question);
                 string response = Console.ReadLine();    
@@ -58,29 +55,20 @@ class Program
 
                 journal.AddEntry(e1);
 
-                Console.WriteLine("Entry Added");
-               
-
-               
-                          
-
-                               
-            }
+                Console.WriteLine("Entry Added");                               
+            }  
             //display entries
             else if (number ==2)
             {
                 journal.DisplayAll();
-
             }
-            
             //load journal
             else if (number ==3)
             {
                 Console.WriteLine("What is the file name that you want to load your Journal from?");
                 string filename = Console.ReadLine();  
 
-                journal.LoadFromfile(filename);
-                
+                journal.LoadFromfile(filename);    
             }
             //Save last entry
             else if (number ==4)
@@ -89,12 +77,7 @@ class Program
                 string filename = Console.ReadLine();
 
                 journal.SaveToFile(filename);
-                
             }
-
-
-
         }
     }
-
 }
