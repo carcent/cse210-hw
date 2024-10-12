@@ -7,28 +7,28 @@ class Program
         
         Video video1 = new Video       
         {
-            _tracktitle = "How to make a short",
-            _trackauthor = "Jose Jones",
-            _tracklength = "89"
+            _trackTitle = "How to make a short",
+            _trackAuthor = "Jose Jones",
+            _trackLength = "89"
            
         };
           Video video2 = new Video       
         {
-            _tracktitle = "How to cook waffles",
-            _trackauthor = "Mary Sawer",
-            _tracklength = "185"
+            _trackTitle = "How to cook waffles",
+            _trackAuthor = "Mary Sawer",
+            _trackLength = "185"
         };
           Video video3 = new Video       
         {
-            _tracktitle = "Going home",
-            _trackauthor = "Laury Shoes",
-            _tracklength = "252"
+            _trackTitle = "Going home",
+            _trackAuthor = "Laury Shoes",
+            _trackLength = "252"
         };
           Video video4 = new Video       
         {
-            _tracktitle = "Living",
-            _trackauthor = "Malena Rui",
-            _tracklength = "160"
+            _trackTitle = "Living",
+            _trackAuthor = "Malena Rui",
+            _trackLength = "160"
         };
 
         video1.AddComment("Susanita", "very informative");
