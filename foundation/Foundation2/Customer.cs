@@ -8,11 +8,11 @@ class Customer
 
     public Customer (string name, Address address)
     {
-        name = _name;
-        address = _address;
+        _name = name;
+        _address = address;
     }
 
-    public bool InsideUsa(Address InsideUsa)
+    public bool InsideUsa()
     {
         return _address.InsideUsa();
     }

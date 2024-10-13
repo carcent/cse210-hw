@@ -10,10 +10,10 @@ class Address
 
     public Address (string street, string city, string state, string country)
     {
-        street = _street;
-        city = _city;
-        state = _state;
-        country = _country;
+        _street = street;
+        _city = city;
+        _state = state;
+        _country = country;
     }
 
     public bool InsideUsa()

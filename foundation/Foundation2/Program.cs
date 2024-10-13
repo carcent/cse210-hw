@@ -16,32 +16,40 @@ class Program
 
         
         Order order1 = new Order(customer1);
-        order1.AddProduct(new Product("screen", "W123", 100.00m, 2));
-        order1.AddProduct(new Product("mouse", "G456", 15.00m, 1));
+        order1.AddProduct(new Product("screen", "W15645423", 100.00m, 2));
+        order1.AddProduct(new Product("mouse", "G456213", 15.00m, 1));
 
         Order order2 = new Order(customer2);
-        order2.AddProduct(new Product("Keypad", "T789", 20.00m, 1));
-        order2.AddProduct(new Product("Mouse", "D012", 15.00m, 1));
-        order2.AddProduct(new Product("Screen", "D012", 115.00m, 1));
+        order2.AddProduct(new Product("Keypad", "T765489", 20.00m, 1));
+        order2.AddProduct(new Product("Mouse", "G456213", 15.00m, 1));
+        order2.AddProduct(new Product("Screen", "W06546512", 115.00m, 1));
         
         Order order3 = new Order(customer3);
-        order3.AddProduct(new Product("screen", "T789", 120.00m, 1));
-        order3.AddProduct(new Product("Keyboard", "D012", 5.00m, 1));
-        order3.AddProduct(new Product("video games", "D012", 5.00m, 2));
+        order3.AddProduct(new Product("screen", "W01588789", 120.00m, 1));
+        order3.AddProduct(new Product("Keyboard", "D01265465", 5.00m, 1));
+        order3.AddProduct(new Product("video games", "V54645012", 15.00m, 2));
 
         Order order4 = new Order(customer4);
-        order4.AddProduct(new Product("Thingamajig", "T789", 20.00m, 3));
-        order4.AddProduct(new Product("Doohickey", "D012", 5.00m, 4));
+        order4.AddProduct(new Product("screen", "W15645423", 100.00m, 2));
+        order4.AddProduct(new Product("mouse", "G456213", 15.00m, 1));
         
         
-        // Mostrar detalles de los pedidos
+      
         Console.WriteLine(order1.GetPackingLabel());
         Console.WriteLine(order1.GetShippingLabel());
-        Console.WriteLine($"Total Cost: {order1.CalculateTotal():C}\n");
+        Console.WriteLine($"\nTotal Cost: {order1.CalculateTotal():C}\n~");
 
         Console.WriteLine(order2.GetPackingLabel());
         Console.WriteLine(order2.GetShippingLabel());
-        Console.WriteLine($"Total Cost: {order2.CalculateTotal():C}\n");
+        Console.WriteLine($"\nTotal Cost: {order2.CalculateTotal():C}\n~");
+
+        Console.WriteLine(order3.GetPackingLabel());
+        Console.WriteLine(order3.GetShippingLabel());
+        Console.WriteLine($"\nTotal Cost: {order3.CalculateTotal():C}\n~");
+
+        Console.WriteLine(order4.GetPackingLabel());
+        Console.WriteLine(order4.GetShippingLabel());
+        Console.WriteLine($"\nTotal Cost: {order4.CalculateTotal():C}\n~");
     }
 
 }

@@ -10,10 +10,10 @@ class Product
 
     public Product(string name, string productId, decimal price, int quantity)
     {
-        name = _name;
-        productId = _productId;
-        price = _price;
-        quantity = _quantity;
+        _name = name;
+        _productId = productId;
+        _price = price;
+        _quantity = quantity;
     }
 
     public decimal TotalCost()
@@ -23,9 +23,6 @@ class Product
 
     public string GetProductDetails()
     {
-        return $"Product: {_name} (ID:{_productId}- Quantity: {_quantity}, Price: {_price:C}, Total: {TotalCost():C}";
+        return $"Product: {_name} ID:{_productId}";
     }
-
-    public string ProductId => _productId;
-
 }

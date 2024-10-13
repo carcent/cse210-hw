@@ -1,15 +1,16 @@
 using System;
 using Microsoft.VisualBasic;
+using System.Collections.Generic;
 
 class Order
 {
     private List<Product> _products;
     private Customer _customer;
 
-    public Order (Customer customer)
+    public Order(Customer customer)
     {
         _products = new List<Product>();
-        customer = _customer;
+        _customer = customer;
     }
 
     public void AddProduct(Product product)
@@ -21,7 +22,7 @@ class Order
         decimal totalPrice = 0;
         decimal shippingCost;
 
-        if (Customer.InsideUsa())
+        if (_customer.InsideUsa())
         {
             shippingCost = 5.00m;
         }
@@ -50,11 +51,6 @@ class Order
     }
     public string GetShippingLabel()
     {
-        {
-        return $"Shipping Label:\n{_customer.GetName()}\n{_customer.GetAddress().GetFullAddress()}";
+        return $"Shipping Label:\n{_customer.GetName()}\n{_customer.GetAddress().GetFullAddress()}";    
     }
-    }
-
-
-
 }
