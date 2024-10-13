@@ -50,7 +50,7 @@ class Program
         video1.DisplayVideoDetails();
         video2.DisplayVideoDetails();
         video3.DisplayVideoDetails();
-        video3.DisplayVideoDetails();
+        video4.DisplayVideoDetails();
 
     }
 
