@@ -1,7 +1,6 @@
 using System;
 using System.Diagnostics;
 
-
 class Program
 {
     static void Main(string[] args)
@@ -18,7 +17,6 @@ class Program
             Console.Write("Select a choice from the menu: ");
             string choice = Console.ReadLine();
             number = int.Parse(choice);
-
         
             if (number == 1)
             {
