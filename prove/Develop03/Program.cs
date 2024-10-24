@@ -7,7 +7,7 @@ class Program
 
     static void Main(string[] args)
     {
-        string filePath = "C:/Users/carli/OneDrive/Documentos/byui/cse210-hw/prove/Develop03/scriptures.txt";
+        string filePath = "scriptures.txt";
         string[] lines = File.ReadAllLines(filePath);
 
         foreach (var line in lines)
