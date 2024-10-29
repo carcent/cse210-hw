@@ -21,5 +21,4 @@ public class StationaryBicycles : Activity
         double distance = GetDistance();
         return distance > 0 ? _duration/ distance : 0;
     }
-
 }
