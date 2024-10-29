@@ -8,8 +8,6 @@ public class Running : Activity
     {
         _distance = distance;
     }
-
-
     public override double GetDistance() 
     {
         return _distance;
