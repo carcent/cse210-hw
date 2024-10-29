@@ -6,14 +6,15 @@ class Program
     static void Main(string[] args)
     {
         int number = -1;
-        while (number != 4)
+        while (number != 5)
         {
             
             Console.WriteLine("Menu Options:");
             Console.WriteLine(" 1. Start breathing activity");
             Console.WriteLine(" 2. Start reflecting activity");
             Console.WriteLine(" 3. Start listing activity");
-            Console.WriteLine(" 4. Quit");
+            Console.WriteLine(" 4. Start walking activity");
+            Console.WriteLine(" 5. Quit");
             Console.Write("Select a choice from the menu: ");
             string choice = Console.ReadLine();
             number = int.Parse(choice);
@@ -34,6 +35,11 @@ class Program
                 listing.Run();
             }
             else if (number == 4)
+            {
+                WalkingActivity walking = new WalkingActivity();
+                walking.Run();
+            }
+            else if (number == 5)
             {
                 Console.WriteLine("Quitting the program. Goodbye!");
             }
