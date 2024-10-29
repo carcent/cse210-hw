@@ -6,9 +6,6 @@ public abstract class Activity
     private string _name; 
     protected int _duration;
     protected DateTime _date;
-   
-
-    
 
     protected Activity(string name, int duration)
     {
@@ -25,10 +22,9 @@ public abstract class Activity
     {
         return 0;
     }
-    public  double GetPace()
+    public virtual double  GetPace()
     {
-        double distance = GetDistance();
-        return distance > 0 ? _duration/ distance : 0;
+        return 0;
     }
     public virtual string GetSumary()
     {

@@ -16,5 +16,10 @@ public class StationaryBicycles : Activity
     {
         return _speed;
     }
+    public override double GetPace()
+    {
+        double distance = GetDistance();
+        return distance > 0 ? _duration/ distance : 0;
+    }
 
 }
