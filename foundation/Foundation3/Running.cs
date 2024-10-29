@@ -19,5 +19,10 @@ public class Running : Activity
         double speed = _distance / _duration *60;
         return speed;
     }
+    public override double GetPace()
+    {
+        double distance = GetDistance();
+        return distance > 0 ? _duration/ distance : 0;
+    }
    
 }
